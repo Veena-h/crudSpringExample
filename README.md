@@ -1,7 +1,4 @@
-![image](https://github.com/Veena-h/crudSpringExample/assets/90477564/bea7d399-be63-421f-8de8-c8b7d66f2bc7)
-![image](https://github.com/Veena-h/crudSpringExample/assets/90477564/110c898d-6689-4faa-9fd8-4889761385c3)
-![image](https://github.com/Veena-h/crudSpringExample/assets/90477564/5db4c8aa-fe0a-4d12-afff-bfcced821f16)
-![image](https://github.com/Veena-h/crudSpringExample/assets/90477564/fd20fa04-26cf-4ee8-8ffd-713b0d66e077)
+
 
 This project demonstrates basic CRUD (Create, Read, Update, Delete) operations using Spring Boot, along with user authentication.
 
