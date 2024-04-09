@@ -17,7 +17,7 @@ public class Studentcontroller
 
 
 
-    @PostMapping("/getdate")
+    @PostMapping("/insertdata")
     public Student registerstud(@RequestBody Student stud)
     {
        return imp.createstud(stud);
@@ -42,6 +42,18 @@ public class Studentcontroller
     public Student updatestud(@RequestBody Student s)
     {
         return imp.updateStud(s);
+    }
+
+    @DeleteMapping("/deletestud/{id}")
+    public boolean delteStud(@PathVariable Integer id)
+    {
+        return imp.deleteStudentById(id);
+    }
+
+    @PostMapping("/login")
+    public Student studlogin(@RequestBody Student s)
+    {
+        return imp.getStudentByEmailAndPassword(s.getEmail(),s.getPassword());
     }
 
 }

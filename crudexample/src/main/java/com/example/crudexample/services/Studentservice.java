@@ -14,4 +14,8 @@ public interface Studentservice
     public List<Student> getAllStudets();
 
     public Student updateStud(Student s);
+
+    public boolean deleteStudentById(Integer Id);
+
+    public  Student getStudentByEmailAndPassword(String Email,String Password);
 }

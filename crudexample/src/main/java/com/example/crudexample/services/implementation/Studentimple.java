@@ -34,4 +34,21 @@ public class Studentimple implements Studentservice
     public Student updateStud(Student s) {
         return repositories.save(s);
     }
+
+    @Override
+    public boolean deleteStudentById(Integer Id) {
+       Integer i = repositories.deleteStudentById(Id);
+       if(i==1)
+       {
+           return true;
+       }else
+       {
+           return false;
+       }
+    }
+
+    @Override
+    public Student getStudentByEmailAndPassword(String Email, String Password) {
+        return repositories.getStudentByEmailAndPassword(Email,Password);
+    }
 }
