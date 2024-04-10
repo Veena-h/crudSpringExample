@@ -20,4 +20,6 @@ public interface StudentRepositories extends JpaRepository<Student,Integer>
 
     public Student getStudentByEmailAndPassword(String Email,String Password);
 
+    public Student getStudentByEmail(String Email);
+
 }

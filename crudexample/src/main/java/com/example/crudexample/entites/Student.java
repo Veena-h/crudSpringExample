@@ -2,10 +2,7 @@ package com.example.crudexample.entites;
 
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -17,6 +14,8 @@ public class Student {
     private int id;
     private String name;
 
+
+    @Column(unique = true)
     private String email;
     private String password;
 
@@ -36,6 +35,7 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
+
 
     public String getEmail() {
         return email;

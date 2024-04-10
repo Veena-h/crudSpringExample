@@ -68,7 +68,7 @@ public class Studentcontroller
 
 
     @GetMapping("/getstatus/{id}")
-    public ResponseEntity<Student> getids(Integer id)
+    public ResponseEntity<Student> getids(@PathVariable Integer id)
     {
            Student ss=imp.getStudentById(id);
            return  ResponseEntity.status(HttpStatus.ACCEPTED).body(ss);
@@ -88,6 +88,39 @@ public class Studentcontroller
       Student ss=imp.updateStud(s);
     return  ResponseEntity.status(HttpStatus.ACCEPTED).body(ss);
 
+}
+
+
+@DeleteMapping("/deletestatus/{id}")
+    public ResponseEntity<Boolean> deletebyid(@PathVariable Integer id)
+{
+    Boolean b=imp.deleteStudentById(id);
+    if(b)
+    {
+
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(b);
+    }else
+    {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(b);
+
+    }
+}
+
+Student s;
+
+@PostMapping("/emailcheck1")
+    public ResponseEntity<Object> checkemail(@RequestBody Student stud)
+{
+    String email=s.getEmail();
+    Student StudEmail=imp.getStudentByEmail(email);
+
+    if(StudEmail ==null)
+    {
+         Student emailcheck=imp.createstud(stud);
+        return  ResponseEntity.status(HttpStatus.CREATED).body(emailcheck);
+    }else {
+        return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid creditials");
+    }
 }
 
 

@@ -18,4 +18,6 @@ public interface Studentservice
     public boolean deleteStudentById(Integer Id);
 
     public  Student getStudentByEmailAndPassword(String Email,String Password);
+
+    public Student getStudentByEmail(String Email);
 }

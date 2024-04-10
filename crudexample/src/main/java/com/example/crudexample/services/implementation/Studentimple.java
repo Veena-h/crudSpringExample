@@ -51,4 +51,9 @@ public class Studentimple implements Studentservice
     public Student getStudentByEmailAndPassword(String Email, String Password) {
         return repositories.getStudentByEmailAndPassword(Email,Password);
     }
+
+    @Override
+    public Student getStudentByEmail(String Email) {
+        return repositories.getStudentByEmail(Email);
+    }
 }
